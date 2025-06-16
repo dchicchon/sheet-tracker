@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "description": "Add website usage to google sheets",
+  "name": "Sheet Tracker",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyd8vVgxKAUsyu3AHz8Pp4+sn9fvZ5wsleDJasXY4/MbWRPX2EyLc5bhcMbKPHY4GTgjgH2Spij0EDBwaxAJbKfFN0579AwWNYjj2Qo5GdNLZAItHQIVnk23wSiJ2pNsaRMnO62R1jvFeBuKvJ//veUUcEg8vIJzEafd+3BNdPmOlgUuZHtRl/vNjHBnFIOCXy1OZ5kAtI7Ysxca25lGyZtC0wzmsInSxE6egSS5JicMv3v5sI3aXv1wG0cGyABu1fADZJBph5j1dNxSZU1Inod/icpRW/1Ti0wVjWYp+W1e2HoyISLo8JGqP6I1lKnYFPpWPEWMuuwpaQ58P805VyQIDAQAB",
+  "version": "0.0.1",
+  "background": {
+    "service_worker": "./src/serviceWorker.ts"
+  },
+  "oauth2": {
+    "client_id": "132127179083-vomcu69kup22ntjil28ljcsdti66ru6b.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/drive"
+    ]
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["scripting", "storage", "activeTab", "identity", "sidePanel"],
+
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}
